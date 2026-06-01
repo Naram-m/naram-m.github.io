@@ -27,4 +27,6 @@ hugoblox:
 links:
   - type: code
     url: https://github.com/Naram-m/Optimistic-NSC
+  - type: slides
+    url: uploads/CDC24.pdf
 ---
