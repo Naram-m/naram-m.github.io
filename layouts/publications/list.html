@@ -120,7 +120,9 @@
           {{ else if $item.Params.publication_short }}
             <div class="pub-venue">{{ $item.Params.publication_short | markdownify }}</div>
           {{ end }}
-          {{ if partial "functions/has_attachments" $item }}
+          {{ $has_ids := false }}
+          {{ with $item.Params.hugoblox }}{{ with .ids }}{{ $has_ids = true }}{{ end }}{{ end }}
+          {{ if or (partial "functions/has_attachments" $item) $has_ids }}
           <div class="pub-links">
             {{ partial "page_links" (dict "page" $item "is_list" 1) }}
           </div>
