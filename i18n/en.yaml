@@ -1,0 +1,3 @@
+# Local i18n overrides. Hugo merges these onto the theme's i18n/en.yaml.
+- id: interests
+  translation: Research Interests
