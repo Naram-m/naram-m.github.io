@@ -23,7 +23,7 @@ show_breadcrumb: false
   <span>Download CV</span>
 </a>
 
-<p class="cv-hint">PDF · last updated May 2026</p>
+<p class="cv-hint">PDF · last updated February 2026</p>
 
 </div>
 
