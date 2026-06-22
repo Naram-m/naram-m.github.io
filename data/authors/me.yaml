@@ -36,10 +36,13 @@ affiliations:
 
 links:
   - icon: academicons/google-scholar
+    label: Google Scholar
     url: https://scholar.google.com/citations?hl=en&user=ks-WnxcAAAAJ
   - icon: brands/github
+    label: GitHub
     url: https://github.com/Naram-m
   - icon: brands/linkedin
+    label: LinkedIn
     url: https://www.linkedin.com/in/naram-mhaisen
 
 interests:

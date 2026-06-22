@@ -20,3 +20,29 @@ section:has(.resume-biography-3),
 .navbar-brand {
   font-size: 0 !important;
 }
+
+/* Bio hero — turn the circular icon-only social buttons into wider pills
+   with the link label visible next to the icon. */
+#section-resume-biography-3 a[title] {
+  width: auto !important;
+  height: auto !important;
+  padding: 0.55rem 1.1rem !important;
+  border-radius: 999px !important;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--hb-color-foreground, #1a1a1a) !important;
+}
+.dark #section-resume-biography-3 a[title] {
+  color: #e8e8e8 !important;
+}
+#section-resume-biography-3 a[title]::after {
+  content: attr(title);
+  margin-left: 0.1rem;
+  white-space: nowrap;
+}
+#section-resume-biography-3 a[title] svg {
+  height: 1.15rem;
+  width: 1.15rem;
+  flex-shrink: 0;
+}
