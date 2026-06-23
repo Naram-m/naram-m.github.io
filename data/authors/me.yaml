@@ -45,6 +45,9 @@ links:
     label: LinkedIn
     url: https://www.linkedin.com/in/naram-mhaisen
 
+interests_intro: |
+  My research lies at the intersection of online learning and network optimization. I develop algorithms that learn from sequential data and adapt to nonstationary environments, with a focus on regret minimization and robustness to imperfect predictions. I apply these ideas to resource allocation problems arising across communication and computing networks.
+
 interests:
   - Online Learning
   - Network Optimization
