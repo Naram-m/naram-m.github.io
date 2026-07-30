@@ -46,3 +46,36 @@ section:has(.resume-biography-3),
   width: 1.15rem;
   flex-shrink: 0;
 }
+
+/* Attachment links (PDF/Slides/Video/Code/etc.) on single pages — events,
+   publications, blog posts — default to a bare uppercase text link that's
+   easy to miss. Turn into a visible pill button, matching the site's other
+   button styles (CV download, publication list links). */
+.hb-attachment-link.hb-attachment-link-large {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 1.1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 1px solid var(--color-primary-600, #1a4d8f);
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+  background: transparent;
+}
+.hb-attachment-link.hb-attachment-link-large svg {
+  height: 1.05em;
+  width: 1.05em;
+}
+.hb-attachment-link.hb-attachment-link-large:hover {
+  color: #fff !important;
+  background: var(--color-primary-600, #1a4d8f);
+}
+.dark .hb-attachment-link.hb-attachment-link-large {
+  border-color: var(--color-primary-400, #7fb2ff);
+}
+.dark .hb-attachment-link.hb-attachment-link-large:hover {
+  color: #0a0a0a !important;
+  background: var(--color-primary-400, #7fb2ff);
+}
