@@ -23,4 +23,7 @@ tags:
   - UAVs
   - Online Learning
 featured: false
+links:
+  - type: preprint
+    url: uploads/drone-rl.pdf
 ---
