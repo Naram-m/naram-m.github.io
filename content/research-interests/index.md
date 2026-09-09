@@ -54,7 +54,7 @@ Finally, I study systems with memory through *non-stochastic control*. As in an 
 
 ## When changing a decision has a cost
 
-More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*This work*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [This work](https://arxiv.org/abs/2512.11131) use smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
+More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*This work*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [this work](https://arxiv.org/abs/2512.11131) use smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
 
 These examples motivate algorithms that balance responsiveness with stability. Our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while tracking a changing benchmark. We establish regimes where this is possible without sacrificing the optimal order of dynamic regret. My aim is to adapt to meaningful change while avoiding costly reactions to every fluctuation.
 
@@ -62,9 +62,8 @@ These examples motivate algorithms that balance responsiveness with stability. O
 
 1. Francesco Orabona. [*Online Learning: A Modern Introduction Using Convex Optimization*][orabona]. 2026 manuscript.
 2. Elad Hazan. [*Introduction to Online Convex Optimization*][hazan]. 2nd edition, MIT Press, 2022.
-3. Shai Shalev-Shwartz. [*Online Learning and Online Convex Optimization*][shalev]. Foundations and Trends in Machine Learning, 4(2), 107–194, 2012.
-4. Tor Lattimore and Csaba Szepesvári. [*Bandit Algorithms*][bandits]. Cambridge University Press, 2020. Free online edition.
-5. Naram Mhaisen. [*Optimistic Learning with Applications to Caching Networks*][thesis]. PhD thesis, TU Delft, 2025.
+3. Tor Lattimore and Csaba Szepesvári. [*Bandit Algorithms*][bandits]. Cambridge University Press, 2020. Free online edition.
+4. Naram Mhaisen. [*Optimistic Learning with Applications to Caching Networks*][thesis]. PhD thesis, TU Delft, 2025.
 
 [orabona]: https://arxiv.org/abs/1912.13213v10
 [hazan]: https://mitpress.mit.edu/9780262046985/introduction-to-online-convex-optimization/
