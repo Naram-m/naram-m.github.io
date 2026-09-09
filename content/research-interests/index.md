@@ -7,7 +7,7 @@ share: false
 profile: false
 show_breadcrumb: false
 show_date: false
-reading_time: false
+reading_time: true
 ---
 
 
