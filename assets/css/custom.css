@@ -79,3 +79,17 @@ section:has(.resume-biography-3),
   color: #0a0a0a !important;
   background: var(--color-primary-400, #7fb2ff);
 }
+
+/* Research Interests page — italic serif tagline sitting under the H1,
+   standing in for a subtitle without introducing a second <h1>. */
+.ri-tagline {
+  font-family: var(--hb-font-heading, Lora, Georgia, serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: var(--hb-color-primary, #1a4d8f);
+  margin: -0.5rem 0 1.5rem;
+}
+.dark .ri-tagline {
+  color: var(--color-primary-400, #7fb2ff);
+}
