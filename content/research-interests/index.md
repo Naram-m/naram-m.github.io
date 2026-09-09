@@ -7,8 +7,22 @@ share: false
 profile: false
 show_breadcrumb: false
 show_date: false
+show_date_updated: false
 reading_time: true
 ---
+
+<style>
+  /* At desktop widths the theme shows an empty 256px left-hand spacer
+     (purely to balance the right-hand TOC) even though this page has
+     no left sidebar. Below xl it's the real mobile nav drawer, so only
+     hide it at the xl breakpoint where it's pure dead space. */
+  @media (min-width: 1280px) {
+    .hb-sidebar-container { display: none !important; }
+  }
+
+  .prose { max-width: 70ch !important; }
+  .prose p, .prose li { line-height: 1.85; }
+</style>
 
 I develop algorithms that allocate resources before knowing future demands or operating conditions. I am interested in learning from this interaction, exploiting useful predictions, and providing rigorous guarantees when the environment behaves unexpectedly.
 
@@ -40,7 +54,7 @@ Finally, I study systems with memory through *non-stochastic control*. As in an 
 
 ## When changing a decision has a cost
 
-More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*Smooth Handovers via Smoothed Online Learning*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [This example](https://arxiv.org/abs/2512.11131) use smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
+More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*This work*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [This work](https://arxiv.org/abs/2512.11131) use smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
 
 These examples motivate algorithms that balance responsiveness with stability. Our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while tracking a changing benchmark. We establish regimes where this is possible without sacrificing the optimal order of dynamic regret. My aim is to adapt to meaningful change while avoiding costly reactions to every fluctuation.
 
