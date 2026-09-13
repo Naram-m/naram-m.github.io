@@ -13,6 +13,21 @@
     {{- $display := $profile.title | default $raw -}}
     {{- $highlight_name := $profile.is_owner | default false -}}
 
+    {{/* Abbreviate given names, keep the surname: "Naram Mhaisen" -> "N. Mhaisen".
+         An existing initial ("Douglas J. Leith") keeps its single period. */}}
+    {{- $parts := split $display " " -}}
+    {{- if gt (len $parts) 1 -}}
+      {{- $initials := slice -}}
+      {{- range first (sub (len $parts) 1) $parts -}}
+        {{- if hasSuffix . "." -}}
+          {{- $initials = $initials | append . -}}
+        {{- else -}}
+          {{- $initials = $initials | append (printf "%.1s." .) -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $display = printf "%s %s" (delimit $initials " ") (index $parts (sub (len $parts) 1)) -}}
+    {{- end -}}
+
     {{- if gt $index 0 }}, {{ end -}}
     <span {{ if $highlight_name }}class="font-bold"{{end}}>{{ $display }}</span>
   {{- end -}}
