@@ -21,7 +21,7 @@ reading_time: true
   }
 
   .prose { max-width: 70ch !important; }
-  .prose p, .prose li { line-height: 1.85; }
+  .prose p, .prose li { line-height: 1.5; }
 </style>
 
 I develop algorithms that allocate resources before knowing future demands or operating conditions. I am interested in learning from this interaction, exploiting useful predictions, and providing rigorous guarantees when the environment behaves unexpectedly.
@@ -50,13 +50,13 @@ Caching provides a concrete starting point: choosing files before requests arriv
 
 The thesis then moves beyond a fixed benchmark. If demand changes, the best allocation can change with it. Through *dynamic regret*, I study performance against a moving sequence of decisions. Our [ICML work on optimism with history pruning](https://arxiv.org/abs/2505.22899) develops a guarantee for this more challenging settings.
 
-Finally, I study systems with memory through *non-stochastic control*. As in an MDP, actions affect future states. Here, the underlying dynamics are linear, while disturbances and convex costs may be adversarial. Familiar linear-quadratic control specifies its cost model in advance. Here, costs arrive sequentially, and we compete with the best **policy** in a specified class, chosen in hindsight; see [Hazan and Singh's introduction to online control](https://www.cambridge.org/core/books/introduction-to-online-control/4EAE3F32A195899D073E496D2EDBD730). My thesis shows how forecasts over an extended horizon help account for the lasting effects of today's actions.
+Finally, I study systems with memory through *non-stochastic control*. As in an MDP, actions affect future states. Here, the underlying dynamics are linear, while disturbances and convex costs may be adversarial, and we compete with the best **policy** in a specified class, chosen in hindsight; see [Hazan and Singh's introduction to online control](https://www.cambridge.org/core/books/introduction-to-online-control/4EAE3F32A195899D073E496D2EDBD730). My thesis shows how forecasts over an extended horizon help account for the lasting effects of today's actions.
 
 ## When changing a decision has a cost
 
-More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*This work*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [this work](https://arxiv.org/abs/2512.11131) use smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
+More recently, I have become interested in *smoothed online learning*, where an algorithm pays both for its decisions and for changing them. [*This work*](https://ieeexplore.ieee.org/abstract/document/11044691) illustrates this tension in mobile networks: better connectivity must be balanced against handover costs. For AI inference, [*This work*](https://arxiv.org/abs/2512.11131) uses smoothed online convex optimization to study server/GPU provisioning with reconfiguration costs.
 
-These examples motivate algorithms that balance responsiveness with stability. Our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while tracking a changing benchmark. We establish regimes where this is possible without sacrificing the optimal order of dynamic regret. My aim is to adapt to meaningful change while avoiding costly reactions to every fluctuation.
+These examples motivate algorithms that balance responsiveness with stability. Our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while still tracking a changing benchmark.
 
 ## References for further reading
 
