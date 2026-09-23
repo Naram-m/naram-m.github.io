@@ -1,5 +1,6 @@
 ---
 title: Research Interests
+summary: I develop algorithms that allocate resources before knowing future demands or operating conditions. I am interested in learning from this interaction, exploiting useful predictions, and providing rigorous guarantees when the environment behaves unexpectedly.
 type: page
 date: 2026-09-09
 toc: true
@@ -8,7 +9,7 @@ profile: false
 show_breadcrumb: false
 show_date: false
 show_date_updated: false
-reading_time: true
+reading_time: false
 ---
 
 <style>
@@ -81,7 +82,33 @@ reading_time: true
   .dark .ri-figure img { filter: invert(1) hue-rotate(180deg); }
 
   .prose ol:last-of-type li { font-size: 0.92em; }
+
+  /* Reading time is set by hand below: Hugo's estimate (213 words/min,
+     references included) rounds this page up to 4. The theme's own line is
+     turned off in the front matter, so tighten the gap it leaves. */
+  main > div.mt-4.mb-16 { margin-bottom: 1rem; }
+  .prose .ri-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0 0 1.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, currentColor 65%, transparent);
+  }
+  .prose .ri-meta::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E") center / contain no-repeat;
+  }
 </style>
+
+<p class="ri-meta">3 min read</p>
 
 <p class="lead">I develop algorithms that allocate resources before knowing future demands or operating conditions. I am interested in learning from this interaction, exploiting useful predictions, and providing rigorous guarantees when the environment behaves unexpectedly.</p>
 
