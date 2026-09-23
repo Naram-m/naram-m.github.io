@@ -118,7 +118,7 @@ In online learning, an algorithm acts, observes feedback, and improves its next 
 
 The central performance measure is <dfn>regret</dfn>: the algorithm's accumulated cost relative to a benchmark, such as the best fixed decision in hindsight (for content delivery networks, the files that would have served users best). A suitable algorithm makes its average excess cost vanish over time without ever seeing future requests. This possibility is what draws me to the field.
 
-Several mathematical frameworks capture this problem and form the basis of my work, from network slicing to UAV navigation and search:
+Several mathematical frameworks capture this problem and form the basis of my work:
 
 <div class="frameworks">
 
