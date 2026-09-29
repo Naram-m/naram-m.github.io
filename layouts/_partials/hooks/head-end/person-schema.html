@@ -1,0 +1,21 @@
+{{/* Schema.org Person on the homepage, built from data/authors/me.yaml so it
+     stays in sync. The sameAs links tie the Scholar/GitHub/LinkedIn profiles
+     to this site for search engines. */}}
+{{- if .IsHome -}}
+  {{- $p := partial "functions/get_author_profile" "me" -}}
+  {{- $sameAs := slice -}}
+  {{- range $p.links }}{{ with .url }}{{ $sameAs = $sameAs | append . }}{{ end }}{{ end -}}
+  {{- $person := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "name" $p.title
+      "url" site.Home.Permalink
+      "jobTitle" $p.role
+      "sameAs" $sameAs
+  -}}
+  {{- with $p.affiliations }}{{ with index . 0 }}
+    {{- $person = merge $person (dict "affiliation" (dict "@type" "Organization" "name" .name "url" .url)) -}}
+  {{- end }}{{ end -}}
+  {{- with $p.avatar }}{{ $person = merge $person (dict "image" .Permalink) }}{{ end -}}
+  <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+{{- end -}}
