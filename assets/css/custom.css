@@ -93,3 +93,26 @@ section:has(.resume-biography-3),
 .dark .ri-tagline {
   color: var(--color-primary-400, #7fb2ff);
 }
+
+/* Recent News (homepage): compact list, one tight row per item —
+   date | title + one-line summary. */
+#news .w-fit { margin-top: 1rem !important; }
+#news .space-y-16 { gap: 1.25rem; }
+#news article { margin-bottom: 0 !important; }
+#news article p {
+  margin-top: 0.15rem;
+  -webkit-line-clamp: 1 !important;
+  line-clamp: 1 !important;
+}
+/* "Read more": the title is already the link. */
+#news article [aria-hidden="true"] { display: none; }
+/* The theme's hover/click area extends 1.5rem above and below each item,
+   which would overlap neighbours at this spacing. */
+#news article [class*="-inset-y-6"] { top: -0.5rem !important; bottom: -0.5rem !important; }
+#news article > div > time { margin-bottom: 0.15rem !important; }
+@media (min-width: 768px) {
+  /* Date column sized to the date instead of a quarter of the width. */
+  #news article { grid-template-columns: 7.5rem 1fr !important; column-gap: 1rem; }
+  #news article > div { grid-column: 2 !important; grid-row: 1; }
+  #news article > time { grid-column: 1 !important; grid-row: 1; margin: 0 !important; }
+}
