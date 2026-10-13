@@ -83,7 +83,7 @@ sections:
     content:
       title: Recent Publications
       text: ''
-      count: 4
+      count: 5
       filters:
         folders:
           - publications
