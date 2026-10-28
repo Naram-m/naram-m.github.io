@@ -141,7 +141,7 @@ My [doctoral thesis][thesis] asks how algorithms can use **untrusted predictions
   <figcaption>The protocol of optimistic learning: at each time slot, an untrusted prediction arrives (1); the learner acts on past costs, the prediction, and its accuracy so far (2); and the cost is realized (3) before the next prediction (4).</figcaption>
 </figure>
 
-Caching is a concrete starting point. Our [TMC paper](https://doi.org/10.1109/TMC.2023.3317943) develops optimistic algorithms for bipartite caching networks, where topology determines which caches serve each request, and learns which prediction sources are useful. Our [SIGMETRICS paper on discrete caching](https://arxiv.org/abs/2208.06414) establishes performance limits and algorithms for whole files and, more generally, the online Knapsack problem. The guarantees improve with prediction accuracy while preserving worst-case regret rates. Our monograph on optimistic learning for communication networks extends these ideas to routing and resource management.
+Caching is a concrete starting point. Our [TMC paper](https://doi.org/10.1109/TMC.2023.3317943) develops optimistic algorithms for bipartite caching networks, where topology determines which caches serve each request, and learns which prediction sources are useful. Our [SIGMETRICS paper on discrete caching](https://arxiv.org/abs/2208.06414) establishes performance limits and algorithms for whole files and, more generally, the online Knapsack problem. The guarantees improve with prediction accuracy while preserving worst-case regret rates. Our [monograph on optimistic learning][monograph] extends these ideas across communication networks.
 
 The thesis then moves beyond a fixed benchmark: if demand changes, so can the best allocation. Through <dfn>dynamic regret</dfn>, I study performance against a moving sequence of decisions; our [ICML work on optimism with history pruning](https://arxiv.org/abs/2505.22899) develops a guarantee for this harder setting.
 
@@ -151,7 +151,7 @@ Finally, I study systems with memory through <dfn>non-stochastic control</dfn>. 
 
 More recently, I have become interested in <dfn>smoothed online learning</dfn>, where an algorithm pays both for its decisions and for changing them. In mobile networks, [work on smooth handovers](https://ieeexplore.ieee.org/abstract/document/11044691) balances connectivity against handover costs; for AI inference, [recent work](https://arxiv.org/abs/2512.11131) applies smoothed online convex optimization to server/GPU provisioning with reconfiguration costs.
 
-These examples motivate algorithms that balance responsiveness with stability; our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while tracking a changing benchmark.
+These examples motivate algorithms that balance responsiveness with stability; our [recent AISTATS paper](https://proceedings.mlr.press/v300/mhaisen26a.html) studies how much an algorithm can moderate its updates while tracking a changing benchmark, and our [NeurIPS paper](https://arxiv.org/abs/2609.30556) handles non-Lipschitz switching costs.
 
 ## References for further reading
 
@@ -159,6 +159,7 @@ These examples motivate algorithms that balance responsiveness with stability; o
 2. Elad Hazan. [*Introduction to Online Convex Optimization*][hazan]. 2nd edition, MIT Press, 2022.
 3. Tor Lattimore and Csaba Szepesvári. [*Bandit Algorithms*][bandits]. Cambridge University Press, 2020. Free online edition.
 4. Naram Mhaisen. [*Optimistic Learning with Applications to Caching Networks*][thesis]. PhD thesis, TU Delft, 2025.
+5. George Iosifidis, Naram Mhaisen, and Douglas J. Leith. [*Optimistic Learning for Communication Networks*][monograph]. Foundations and Trends in Networking, to appear.
 
 [orabona]: https://arxiv.org/abs/1912.13213v10
 [hazan]: https://mitpress.mit.edu/9780262046985/introduction-to-online-convex-optimization/
@@ -166,3 +167,4 @@ These examples motivate algorithms that balance responsiveness with stability; o
 [bandits]: https://tor-lattimore.com/downloads/book/book.pdf
 [thesis]: https://doi.org/10.4233/uuid:68fd39be-e3d5-4b3a-a3e5-76c80b3121f0
 [control]: https://www.cambridge.org/core/books/introduction-to-online-control/4EAE3F32A195899D073E496D2EDBD730
+[monograph]: https://arxiv.org/abs/2504.03499
